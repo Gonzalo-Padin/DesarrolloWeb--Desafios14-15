@@ -1,0 +1,87 @@
+@import "colours";
+
+@mixin size ($alto, $ancho) {
+	height: $alto;
+	width: $ancho;
+}
+
+/* ANIDACION EN SASS */
+h1 {
+	color: $color--principal;
+	text-align: center;
+	div {
+		color: $color--secundario;
+		h3 {
+			color: $color--terciario;
+		}
+		p {
+			span {
+				color: $color--terciario;
+			}
+		}
+	}
+}
+/* Fin ANIDACION */
+
+/* BUCLE */
+ol {
+	text-align: center;
+	list-style-type: none;
+	font-size: 5rem;
+}
+
+@for $i from 1 through 7 {
+	.linea-#{$i}{font-size: 15rem / ($i*1.5);}
+}
+/* Fin BUCLE */
+
+/* CONDICIONALES */
+.div__mod-2 {
+	@include size (15rem, 15rem);
+	text-align: center;
+	margin: 5rem;
+}
+
+.div__mod-2--2 {
+	@extend .div__mod-2
+}
+
+$modo--oscuro: true; /* Mi constante */
+
+.div__mod-2 {
+	@if $modo--oscuro == true {
+		background-color: $fondo--negro;
+		color: $color--blanco;
+	}
+	@else {
+		background-color: $fondo--terciario;
+	}
+}
+
+.div__mod-2--2 {
+	@if $modo--oscuro == false {
+		background-color: $fondo--negro;
+		color: $color--blanco;
+	}
+	@else {
+		background-color: $fondo--terciario;
+	}
+}
+/* Fin CONDICIONALES */
+
+/* MAPS + EACH */
+$buttons__color:(
+	op1: $fondo--secundario,
+	op2: $fondo--terciario,
+	op3: $fondo--principal,
+);
+
+@each $option, $color in $buttons__color {
+	.btn--#{$option} {
+		background-color: $color;
+	}
+}
+/* Fin MAPS + EACH */
+
+
+

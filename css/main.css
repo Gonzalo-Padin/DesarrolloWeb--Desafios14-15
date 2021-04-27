@@ -1,0 +1,67 @@
+/* ANIDACION EN SASS */
+h1 {
+  color: red;
+  text-align: center; }
+  h1 div {
+    color: blue; }
+    h1 div h3 {
+      color: orange; }
+    h1 div p span {
+      color: orange; }
+
+/* Fin ANIDACION */
+/* BUCLE */
+ol {
+  text-align: center;
+  list-style-type: none;
+  font-size: 5rem; }
+
+.linea-1 {
+  font-size: 10rem; }
+
+.linea-2 {
+  font-size: 5rem; }
+
+.linea-3 {
+  font-size: 3.33333rem; }
+
+.linea-4 {
+  font-size: 2.5rem; }
+
+.linea-5 {
+  font-size: 2rem; }
+
+.linea-6 {
+  font-size: 1.66667rem; }
+
+.linea-7 {
+  font-size: 1.42857rem; }
+
+/* Fin BUCLE */
+/* CONDICIONALES */
+.div__mod-2, .div__mod-2--2 {
+  height: 15rem;
+  width: 15rem;
+  text-align: center;
+  margin: 5rem; }
+
+/* Mi constante */
+.div__mod-2, .div__mod-2--2 {
+  background-color: black;
+  color: white; }
+
+.div__mod-2--2 {
+  background-color: blue; }
+
+/* Fin CONDICIONALES */
+/* MAPS + EACH */
+.btn--op1 {
+  background-color: red; }
+
+.btn--op2 {
+  background-color: blue; }
+
+.btn--op3 {
+  background-color: green; }
+
+/* Fin MAPS + EACH */
